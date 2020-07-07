@@ -1,5 +1,4 @@
 import manifest from './manifest';
-import {Top, Left} from './components';
 import {addStyle, removeStyle} from './css';
 
 export default class Plugin {
@@ -7,27 +6,20 @@ export default class Plugin {
     initialize(registry, store) {
         // @see https://developers.mattermost.com/extend/plugins/webapp/reference/
 
-        registry.registerRootComponent(Top);
-        registry.registerRootComponent(Left);
-
         addStyle('customized-css', `
-          .sidebar--left {
-            left: 150px;
-            top: 100px;
-            height: calc(100% - 100px);
-          }
 
-          .sidebar--right {
-            top: 163px;
-            height: calc(100% - 100px);
+          .share-link {
+            display: none;
           }
+          
+          // .search-and-add {
+          //   display: none;
+          // }
 
-          .app__content {
-            left: 150px;
-            top: 100px;
-            height: calc(100% - 100px);
-            width: calc(100% - 220px - 150px);
-          }
+          .invitation-modal-or { 
+            display: none; 
+          } 
+
         `);
     }
 
