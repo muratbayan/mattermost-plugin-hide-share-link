@@ -11,13 +11,13 @@ export default class Plugin {
           .share-link {
             display: none;
           }
-          
+
           // .search-and-add {
           //   display: none;
           // }
 
           .invitation-modal-or { 
-            display: none; 
+            display: none !important; 
           } 
 
         `);
